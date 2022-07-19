@@ -47,7 +47,7 @@ exports.GiveawayMessages = {
  *
  * @property {string} [content] The raw message
  * @property {Discord.EmbedBuilder|Discord.EmbedData|Discord.APIEmbed} [embed] The embed
- * @property {Array<Discord.ActionRowBuilder<Discord.MessageActionRowComponentBuilder>|Discord.MessageActionRowComponentData>} [components] The components.<br>"content" or "embed" is required to be defined.
+ * @property {Array<Discord.ActionRowBuilder<Discord.APIActionRowComponentTypes | Discord.APIActionRowComponent<Discord.APIActionRowComponentTypes>>>} [components] The components.<br>"content" or "embed" is required to be defined.
  * @property {boolean} [replyToGiveaway] If the sent message should reply to the giveaway embed.
  */
 
@@ -125,7 +125,7 @@ exports.LastChanceOptions = {
  * @property {boolean} [isPaused=false] If the giveaway is paused.
  * @property {string} [content='⚠️ **THIS GIVEAWAY IS PAUSED !** ⚠️'] The text of the embed when the giveaway is paused.
  * @property {number} [unPauseAfter=null] The number of milliseconds, or a timestamp in milliseconds, after which the giveaway will automatically unpause.
- * @property {Discord.EmbedColorResolveAble} [embedColor='#FFFF00'] The color of the embed when the giveaway is paused.
+ * @property {Discord.ColorResolveAble} [embedColor='#FFFF00'] The color of the embed when the giveaway is paused.
  * @private @property {number} [durationAfterPause=null|giveaway.remainingTime] The remaining duration after the giveaway is unpaused.<br>⚠ This property gets set by the manager so that the pause system works properly. It is not recommended to set it manually!
  * @property {string} [infiniteDurationText='`NEVER`'] The text that gets displayed next to "GiveawayMessages#drawing" in the paused embed, when there is no "unPauseAfter".
  */
